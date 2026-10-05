@@ -56,12 +56,12 @@ export default function App() {
       [windows.blueEvening, '蓝调 · 日落后'],
     ]
       .filter(([w]) => w)
-      .map(([w, name]) => ({ name, s: scoreWindow({ ...w, _dayStart: dayStart }, dayIdx, data) }))
+      .map(([w, name]) => ({ name, s: scoreWindow(w, data) }))
       .filter((x) => x.s);
     if (!best.length) return null;
     best.sort((a, b) => b.s.score - a.s.score);
     return { ...best[0].s, windowName: best[0].name };
-  }, [data, windows, dayIdx, dayStart]);
+  }, [data, windows]);
 
   const days = useMemo(() => buildDays(data?.daily, today), [data, today]);
 
