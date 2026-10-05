@@ -25,3 +25,6 @@ dist-ssr
 
 # Claude Code 本地配置
 .claude/
+
+# Cloudflare Workers 本地状态
+.wrangler/

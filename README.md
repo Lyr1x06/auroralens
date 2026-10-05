@@ -9,6 +9,16 @@ npm install
 npm run dev
 ```
 
+## 部署
+
+项目通过 Cloudflare Workers 静态资源（Static Assets）发布，配置见 `wrangler.jsonc`。
+
+```bash
+npm run deploy
+```
+
+线上地址：https://aurora-lens.mr-young1105.workers.dev
+
 ## 数据源
 
 - 天气与能见度：[Open-Meteo](https://open-meteo.com)（免 API key）
